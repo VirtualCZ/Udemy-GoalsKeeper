@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, FlatList, Pressable} from 'react-native';
+import {StyleSheet, StatusBar, View, Text, FlatList, Pressable} from 'react-native';
 import IonIcon from 'react-native-vector-icons/Ionicons';
 
 import GoalItem from './components/GoalItem';
@@ -26,7 +26,15 @@ export default function App() {
   }
 
   return (
-    <View style={styles.appcontainer}>
+    <>
+      {/* <StatusBar
+        animated={true}
+        backgroundColor="#61dafb"
+        barStyle={statusBarStyle}
+        showHideTransition={statusBarTransition}
+        hidden={hidden} /> */}
+  
+      <View style={styles.appcontainer}>
 
       <Pressable onPress={() => setModalView(!ModalView)} >   
         <View style={styles.AddGoalBtn}>
@@ -60,6 +68,7 @@ export default function App() {
       />
 
     </View>
+    </>
   );
 }
 
